@@ -6,16 +6,17 @@
 }
 
 body{
-    min-height: 10vh;
-    background-color: #603da1;
+    background-color: #e9a972;
+    background-image: url(img/albert.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .calculadora{
-    background-color: #3f15d6;
-    color: aliceblue;
+    background-color: #F5CBA7;
+    color: rgb(27, 32, 36);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 350px;
@@ -24,15 +25,16 @@ body{
     border-radius: 1rem;
     gap: 0.5rem;
     margin-top: 20px;
+    
+    
 }
 
 .pantalla{
     grid-column: 1 / -1;
-    background-color: #603da1;
+    background-color: #F9F5F2;
     padding: 1.5rem;
     font-size: 2rem;
     text-align: right;
-    border-radius: 5rem;
     margin-bottom: 1rem;
     font-family: monospace;
     font-weight: 600;
@@ -40,8 +42,8 @@ body{
 }
 
 .btn{
-    background-color: #603da1;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: rgb(27, 32, 36);
     border: 0;
     padding: 1.5rem .5rem;
     display: flex;
@@ -52,7 +54,7 @@ body{
 }
 
 .btn:hover{
-    background-color:#3f15d6
+    background-color:#868580;
 }
 
 #cero{
@@ -61,12 +63,12 @@ body{
 
 #igual{
     grid-row: span 2;
-    background-color: red;
+    background-color: #8a7e7eb0;
 
 }
 
 #igual:hover{
-    background-color: red;
+    background-color: #777671;
 }
 
 
