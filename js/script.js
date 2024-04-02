@@ -11,7 +11,7 @@ botones.forEach(boton => {
         }  
 
         if(boton.id === "borrar"){
-            if(pantalla.textContent.length === 1){      //al momento de dar click en borrar "<-" eliminara uno por uno los digitos 
+            if(pantalla.textContent.length === 1 || pantalla.textContent === "Error"){      //al momento de dar click en borrar "<-" eliminara uno por uno los digitos 
                 pantalla.textContent = "0";
         } else {
                 pantalla.textContent = pantalla.textContent.slice(0, -1);    //Al borrar todo llegara al numero 0
@@ -20,11 +20,16 @@ botones.forEach(boton => {
         }
 
         if(boton.id === "igual"){
-            pantalla.textContent = eval(pantalla.textContent); // Aqui con el metodo "eval" calcula las operaciones
-            return;
+            try{
+            pantalla.textContent = eval(pantalla.textContent); // Aqui con la funcion "eval" calcula las operaciones
+        } catch {
+            pantalla.textContent = "Error";     //Si no se puede realizar una operación, mostrara el mensaje
+        }  
+        return;
+
         }
 
-        if(pantalla.textContent === "0"){
+        if(pantalla.textContent === "0" || pantalla.textContent === "Error"){
             pantalla.textContent = botonApretado;
         } else {
             pantalla.textContent += botonApretado; 
